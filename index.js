@@ -43,7 +43,7 @@ app.get("/auteurs/:id", (req, res)=>{
     res.status(404).send("Dezole auteur sa pa disponib.");
   }
   
-  res.send(auteur);
+  res.send(auteur.name);
 });
 
 app.listen(PORT, ()=>{
