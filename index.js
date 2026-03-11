@@ -16,9 +16,7 @@ app.get("/livres", (req, res)=>{
 app.get("/livres/:id", (req, res)=>{
   const id = req.params.id;
   
-  const liv = livres.find((l)=>{
-    l.id === Number(id);
-  });
+  const liv = livres.find(l => l.id === Number(id));
   
   if (!liv) {
     res.status(404).send("Nou pa jwenn li sa.");
